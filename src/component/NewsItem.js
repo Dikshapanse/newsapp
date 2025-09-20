@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 
 export class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl, author, date } = this.props;
+    let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
     return (
       <>      
         <div className='my-3'>
           <div className="card">
+            <div style={{display: 'flex', justifyContent:'flex-end', position: 'absolute', right: '0'}}>
+              <span className='badge rounded-pill bg-danger'> {source} </span>
+            </div>
             <img style={{ width: '355px', height: '250px' }}
               src={imageUrl || "/noimage.png"} 
               onError={(e) => { e.target.src = "/noimage.png"; }} 
@@ -14,10 +17,7 @@ export class NewsItem extends Component {
               alt="news"
             />
             <div className="card-body">
-              <h5 className="card-title">{title}...<span className="position-absolute top-0 start-100 translate-middle p-2 bg-info border border-light rounded-circle">
-    <span className="visually-hidden">New alerts</span>
-  </span>
-</h5>
+              <h5 className="card-title">{title}...</h5>
               <p className="card-text">{description}...</p>
               <p className="card-text">
                 <small 

@@ -5,7 +5,7 @@
     render() {
         return (
         <div className='text-center'>
-            <img src={loading} alt="loading" />
+            <img className='my-4' src={loading} alt="loading" />
         </div>
         )
     }
