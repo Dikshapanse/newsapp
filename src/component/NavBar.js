@@ -7,6 +7,7 @@ const NavBar = () => {
       <>
         <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
+            <img src="/favicon.png" alt="Logo" style={{ height: "45px", width: "85px", borderRadius:"9px", marginRight: '15px' }}/>
             <Link className="navbar-brand" to="/">Quick_News</Link>
             <button
               className="navbar-toggler"
